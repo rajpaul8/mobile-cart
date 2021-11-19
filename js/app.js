@@ -4,7 +4,7 @@ function app() {
     this.nameInput = $('.text-input');
     this.checkBoxes = $('input[type="checkbox"]');
     this.checkboxLabel = $('.price-filter label');
-    this.items =JSON.parse(localStorage.getItem('items')) || [
+    this.items = this.items =JSON.parse(localStorage.getItem('items')) || [
         {
             name: 'Apple iPhone 11',
             rom: '128gb',
@@ -52,7 +52,7 @@ app.prototype.render = function() {
             </div>`;
         const element = document.createElement('div');
         element.innerHTML = template;
-        this.listing.appendChild(element);
+        this.listing.append(element);
     });
 }
 
