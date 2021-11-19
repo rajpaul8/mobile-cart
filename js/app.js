@@ -4,7 +4,7 @@ function app() {
     this.nameInput = document.getElementsByClassName('text-input');
     this.checkBoxes = document.querySelectorAll('input[type="checkbox"]');
     this.checkboxLabel = document.querySelector('.price-filter label');
-    this.items = [
+    this.items =JSON.parse(localStorage.getItem('items')) || [
         {
             name: 'Apple iPhone 11',
             rom: '128gb',
@@ -22,7 +22,8 @@ function app() {
             price: 70000,
             brand: 'samsung',
             imageUrl: 'sample-mobile.webp'
-        }
+        },
+
     ];
     this.filters = {
         name: '',

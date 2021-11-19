@@ -10,6 +10,15 @@ admin.prototype.bindEvents = function() {
         for(const [key, value] of formData.entries()) {
             formMap[key] = value;
         }
+        const items = localStorage.getItem('items');
+        if(items) {
+            const previousItems = JSON.parse(items);
+            localStorage.setItem('items', JSON.stringify(previousItems.concat([formMap])));
+        }
+        else {
+            localStorage.setItem('items', JSON.stringify([formMap]));
+        }
+        window.location.reload();
     });
 }
 
