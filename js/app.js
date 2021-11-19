@@ -1,9 +1,9 @@
 function app() {
-    this.select = document.getElementsByTagName('select');
-    this.listing = document.getElementById('listing');
-    this.nameInput = document.getElementsByClassName('text-input');
-    this.checkBoxes = document.querySelectorAll('input[type="checkbox"]');
-    this.checkboxLabel = document.querySelector('.price-filter label');
+    this.select = $('select');
+    this.listing = $('#listing');
+    this.nameInput = $('.text-input');
+    this.checkBoxes = $('input[type="checkbox"]');
+    this.checkboxLabel = $('.price-filter label');
     this.items =JSON.parse(localStorage.getItem('items')) || [
         {
             name: 'Apple iPhone 11',

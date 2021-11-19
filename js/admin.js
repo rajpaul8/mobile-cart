@@ -1,5 +1,5 @@
 function admin() {
-    this.form = document.getElementById('form');
+    this.form = $('form');
 }
 
 admin.prototype.bindEvents = function() {
